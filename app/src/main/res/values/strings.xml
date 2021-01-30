@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Status Cats</string>
+    <string name="flip">Girar</string>
 </resources>

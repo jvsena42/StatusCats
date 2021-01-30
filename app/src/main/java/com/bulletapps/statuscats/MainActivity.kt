@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         back_anim = AnimatorInflater.loadAnimator(applicationContext,R.animator.back_animator) as AnimatorSet
 
         //Event Listener
-        binding.fabRefresh.setOnClickListener {
+        binding.btFlip.setOnClickListener {
             if (isFront){
                 front_anim.setTarget(binding.cvFront)
                 back_anim.setTarget(binding.cvBack)
