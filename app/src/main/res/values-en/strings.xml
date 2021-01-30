@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Status Cats</string>
+    <string name="flip">Flip</string>
+    <string name="ERROR_UNEXPECTED">An unexpected error has occurred. Check your Internet conection</string>
+</resources>

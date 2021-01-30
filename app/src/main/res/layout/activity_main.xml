@@ -38,7 +38,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="casual"
-                android:text="400"
                 android:textColor="@color/gray"
                 android:textSize="100sp"
                 android:textStyle="bold" />
@@ -67,7 +66,6 @@
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/cat"
                 tools:srcCompat="@tools:sample/avatars" />
         </com.google.android.material.card.MaterialCardView>
 
