@@ -1,4 +1,4 @@
-package com.bulletapps.statuscats
+package com.bulletapps.statuscats.model
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

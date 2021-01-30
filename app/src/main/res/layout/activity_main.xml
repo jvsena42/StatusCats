@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/pink"
-        tools:context=".MainActivity">
+        tools:context=".activity.MainActivity">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_front"
