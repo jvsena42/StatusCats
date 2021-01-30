@@ -4,5 +4,5 @@ import android.graphics.Bitmap
 import java.io.File
 
 data class CatModel(
-    val file:Bitmap
+    val file:File
 )

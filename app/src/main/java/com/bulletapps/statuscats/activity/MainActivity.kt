@@ -61,13 +61,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getImages(){
-        mViewModel.getPhoto("500")
+        mViewModel.getPhoto("200")
     }
 
     private fun observe(){
         mViewModel.catPhoto.observe(this, Observer {
             if (it.success) {
                 Toast.makeText(this, "deu certo", Toast.LENGTH_SHORT).show()
+                binding.ivBack.setImageBitmap(it.model)
             }else{
                 Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
                 Log.d("ERRO",it.message)
