@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
         mViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        mViewModel.binding = binding
 
         initAnimation()
         getImages()
@@ -66,12 +66,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun observe(){
         mViewModel.catPhoto.observe(this, Observer {
-            if (it.success) {
-                Toast.makeText(this, "deu certo", Toast.LENGTH_SHORT).show()
-                binding.ivBack.setImageBitmap(it.model)
-            }else{
+            if (!it.success) {
                 Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
-                Log.d("ERRO",it.message)
             }
         })
     }

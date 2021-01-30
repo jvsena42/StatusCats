@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.bulletapps.statuscats.databinding.ActivityMainBinding
 import com.bulletapps.statuscats.model.CatModel
 import com.bulletapps.statuscats.network.listener.APIListener
 import com.bulletapps.statuscats.network.listener.ValidationListener
@@ -16,6 +17,7 @@ import java.io.File
 class MainActivityViewModel(application: Application): AndroidViewModel(application) {
 
     private val mCatRepository = CatRepository(application)
+    lateinit var binding: ActivityMainBinding
 
     private val mCatPhoto =  MutableLiveData<ValidationListener>()
     val catPhoto: LiveData<ValidationListener> = mCatPhoto
@@ -23,7 +25,8 @@ class MainActivityViewModel(application: Application): AndroidViewModel(applicat
     fun getPhoto(id:String){
         mCatRepository.getPhoto(id,object: APIListener<Bitmap>{
             override fun onSuccess(model: Bitmap) {
-                mCatPhoto.value = ValidationListener("",model,true)
+//                mCatPhoto.value = ValidationListener("",model,true)
+                binding.ivBack.setImageBitmap(model)
             }
 
             override fun onFailure(str: String) {

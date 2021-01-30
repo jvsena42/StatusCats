@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="MyViewModel"
+            type="com.bulletapps.statuscats.viewmodel.MainActivityViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +22,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
-            android:clickable="true"
+            android:backgroundTint="@color/white"
             app:cardCornerRadius="10dp"
             app:cardElevation="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -37,6 +39,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="casual"
                 android:text="400"
+                android:textColor="@color/gray"
                 android:textSize="100sp"
                 android:textStyle="bold" />
         </com.google.android.material.card.MaterialCardView>
