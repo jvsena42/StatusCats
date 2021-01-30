@@ -1,4 +1,4 @@
-package com.crosoften.statuscats
+package com.bulletapps.statuscats
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

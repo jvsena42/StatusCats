@@ -1,4 +1,4 @@
-package com.crosoften.statuscats
+package com.bulletapps.statuscats
 
 import org.junit.Test
 
