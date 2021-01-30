@@ -14,7 +14,7 @@
         tools:context=".MainActivity">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView"
+            android:id="@+id/cv_front"
             android:layout_width="0dp"
             android:layout_height="300dp"
             android:layout_marginStart="24dp"
@@ -49,7 +49,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+            app:layout_constraintTop_toBottomOf="@+id/cv_front"
             app:maxImageSize="30dp"
             app:srcCompat="@drawable/ic_refresh" />
 
