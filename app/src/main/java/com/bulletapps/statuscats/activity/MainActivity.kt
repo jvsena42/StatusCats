@@ -30,6 +30,17 @@ class MainActivity : AppCompatActivity() {
         initAnimation()
         getImages()
         observe()
+
+        binding.fabRefresh.setOnClickListener {
+            if (!isFront){
+                frontAnim.setTarget(binding.cvBack)
+                backAnim.setTarget(binding.cvFront)
+                backAnim.start()
+                frontAnim.start()
+                isFront = true
+            }
+            getImages()
+        }
     }
 
     private fun initAnimation(){
@@ -61,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getImages(){
-        mViewModel.getPhoto("200")
+        mViewModel.getPhoto()
     }
 
     private fun observe(){
